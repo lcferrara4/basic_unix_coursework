@@ -20,5 +20,5 @@ Reading 01
 
 	7. time simulation
 
-	8. 
+	8. git config --system core.editor vim // My editor of choice is vim 
 
