@@ -71,26 +71,23 @@ Who can execute that file? User (me), group, and world (other)
   	system:administrators rlidwka
   	system:anyuser l
   	lferrara rlidwka
+	
+	This means that system administrators have all seven standard permissions (read(r), lookup(l), insert(i), delete(d), write(w), lock(k), and administer(a). Any user has permission to lookup, meaning that can call commands ls, ls -ld, and fs listacl. I (lferrara) have all seven standard permissions as well.
 
-This means that system administrators have all seven standard permissions (read(r), lookup(l), insert(i), delete(d), write(w), lock(k), and administer(a). Any user has permission to lookup, meaning that can call commands ls, ls -ld, and fs listacl. I (lferrara) have all seven standard permissions as well.
-
-My private directory:
+   My private directory:
 	system:administrators rlidwka
 	lferrara rlidwka
 
-This means that system administrators and I have all seven standard permissions. Any other user has no permissions.
+	This means that system administrators and I have all seven standard permissions. Any other user has no permissions.
 
-My public directory:
+   My public directory:
 	system:administrators rlidwka
 	system:anyuser rlk
 	lferrara rlidwka
 
-This means that system administrators and I have all seven standard permissions. Any other user has permissions to read, lookup, and lock.
+	This means that system administrators and I have all seven standard permissions. Any other user has permissions to read, lookup, and lock.
 
-2. /afs/nd.edu/commons has Unix permissions drwxrwxrwx, so the owner, groups, and others have Unix permissions to read, write, and execute. However, when I call *touch /afs/nd.edu/common/lferrara.txt*, the following error message occurs:
-touch: cannot touch `/afs/nd.edu/common/lferrara.txt': Read-only file system
-
-This occurs because the ACL permissions must be different, making it so that my ACL permissions for this directory are to lookup, but not to insert (add new files).
+2. /afs/nd.edu/commons has Unix permissions drwxrwxrwx, so the owner, groups, and others have Unix permissions to read, write, and execute. However, when I call *touch /afs/nd.edu/common/lferrara.txt*, the following error message occurs: touch: cannot touch `/afs/nd.edu/common/lferrara.txt': Read-only file system. This occurs because the ACL permissions must be different, making it so that my ACL permissions for this directory are to lookup, but not to insert (add new files).
 
 3. fs setacl <directory> pbui rlidwka system:administrators '' system:anyuser ''
 where <directory> is the name of the folder in my home directory
