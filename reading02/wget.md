@@ -24,6 +24,10 @@ Resources
 
 [git]: https://computerhope.com
 
+- [Awesome wget examples](http://http://www.thegeekstuff.com/2009/09/the-ultimate-wget-download-guide-with-15-awesome-examples/)
+
+[git]: https://www.thegeekstuff.com
+
 - [Manual Page](https://http://man7.org/linux/man-pages/man1/wget.1.html)
 
 [git]: https://man7.org 
