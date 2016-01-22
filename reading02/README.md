@@ -7,7 +7,7 @@ Reading 02
 
 3. host "domain name"
 
-4. ping "address or domain name"
+4. ping "IP address or domain name"
 
 5. sftp username@remote\_hostname\_or\_IP   Then, use get or put to transfer the file to/from local host.  bye to quit sftp session.
 
