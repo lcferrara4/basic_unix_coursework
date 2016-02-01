@@ -3,7 +3,7 @@ Reading 03
 
 Part 2:
 
-1. strings /bin/ls
+1. strings -a /bin/ls
 
 2. ldd /bin/ls
 
