@@ -7,48 +7,54 @@
 #define CHOMP(s)    (s[strlen(s) - 1] = 0)
 
 char *sanitize_string(char *s) {
-    char *sanitized = malloc(strlen(s) + 1);
-    char *writer    = sanitized;
-    char *reader    = s;
+      char *sanitized = malloc(strlen(s) + 1);
+      char *writer    = sanitized;
+      char *reader    = s;
 
-    while (*reader != 0) {
+      while (*reader != 0) {
         if (isalpha(*reader)) {
             *writer = *reader;
             writer++;
+                                                  
         }
         reader++;
-    }
+                            
+      }
 
-    return sanitized;
+      *writer = 0; // adds the null character to the end
+
+      return sanitized;
+
 }
 
 bool is_palindrome(const char *s) {
-    const char *front = s;
-    const char *back  = s + strlen(s) - 1;
+      const char *front = s;
+      const char *back  = s + (strlen(s) - 1);
 
-    while (front < back && *front == *back) {
+      while (front < back && *front == *back) {
         front++;
         back--;
-    }
+                                
+      }
 
-    return (*front == *back);
+      return (*front == *back);
+
 }
 
 int main(int argc, char *argv[]) {
-    char buffer[BUFSIZ];
-    char *sanitized, *result;
+      char buffer[BUFSIZ];
+          char *sanitized, *result;
 
-    while (fgets(buffer, BUFSIZ, stdin)) {
-        CHOMP(buffer);
+          while (fgets(buffer, BUFSIZ, stdin)) {
+                    CHOMP(buffer);
 
-        sanitized = strdup(sanitize_string(buffer));
-        result    = is_palindrome(sanitized) ? "" : "not ";
+                    sanitized = sanitize_string(buffer);
+                    result = is_palindrome(sanitized) ? "" : "not ";
 
-        printf("%s is %sa palindrome!\n", buffer, result);
+                    printf("%s is %sa palindrome!\n", buffer, result);
 
-        free( sanitized );
-        }
+                    free( sanitized  );                                        
+          }
 
-    return EXIT_SUCCESS;
+          return EXIT_SUCCESS;
 }
-
