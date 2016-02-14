@@ -89,17 +89,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.07 seconds
 		| libcurl/7.19.7 NSS/3.15.3 zlib/1.2.3    |
 		| libidn/1.18 libssh2/1.4.2     
 	
-	wget 129.74.161.24:9111
-	--> oddly gets a slightly different message with a dragon.
-		
-		Says name is GET / HTTP/1.0
-
-		Gives message:
-
-		User-Agent: Wget/1.12 (linux-gnu) 	
-
-
-	Both redirect you to the SLEEPER or the DOORMAN
+	Redirects you to the SLEEPER or the DOORMAN
 
 	curl 129.74.161.24:9876
 	A message from darth vader koala saying:
