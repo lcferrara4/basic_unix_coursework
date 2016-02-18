@@ -1,12 +1,12 @@
 Lauren Ferrara
 Reading05 Summary Page
 
-1. variables
+**variables**
 
   * Just use an = sign
   * Example: title = "System Information for"
 
-2. capturing STDOUT
+**capturing STDOUT**
 
   for homedir in /home/*
 
@@ -14,7 +14,7 @@ Reading05 Summary Page
 
   done 2> /dev/null 
 
-3. if statement
+**if statement**
 
   if [ -f .bash_profile  ]; then
 
@@ -26,7 +26,7 @@ Reading05 Summary Page
 
   fi
 
-4. case statement
+**case statement**
 
   echo -n "Enter a number between 1 and 3 inclusive > "
 
@@ -50,7 +50,7 @@ Reading05 Summary Page
 
   esac
 
-5. for loop
+**for loop**
   
 
   for i in 1 2 3 4 5
@@ -61,7 +61,7 @@ Reading05 Summary Page
 
   done
 
-6. while loop
+**while loop**
 
   INPUT_STRING=hello
 
@@ -77,7 +77,7 @@ Reading05 Summary Page
 
   done
 
-7. function
+**function**
 
   myfunc(){
 
@@ -90,7 +90,7 @@ Reading05 Summary Page
   }
 
 
-8. trap
+**trap**
 
   TEMP_FILE=/tmp/printfile.txt
 
