@@ -1,25 +1,34 @@
-TLDR - zip
+TLDR - tail
 ==========
 
 Overview
 --------
 
-zip is used to compressed files into a .zip archive.
+tail examines the bottom part of a file
 
 Examples
 --------
 
-- Zip all the files in the current folder: zip archive *
+- tail -n2 grocery.list
 
-- Zip the current folder and subdirectories: zip -r archive *
+plums
+carrots
+
+- tail -c12 grocery.list
+
+ums
+carrots
+
+-c is for characters
+-n is for lines
 
 Resources
 ---------
 
-- [Zip/Unzip on Linux](http://robdvr.com/zip-unzip-linux/)
+- [Intro to Text Manipulation](http://www.ibm.com/developerworks/aix/library/au-unixtext/)
 
-[git]: https://robdvr.com
+[git]: https://www.ibm.com
 
-- [Manual Page](http://linux.die.net/man/1/zip)
+- [Manual Page](http://man7.org/linux/man-pages/man1/tail.1.html)
 
-[git]: http://linux.die.net
+[git]: http://man7.org
