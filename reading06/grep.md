@@ -1,25 +1,41 @@
-TLDR - zip
+TLDR - grep
 ==========
 
 Overview
 --------
 
-zip is used to compressed files into a .zip archive.
+grep is used to match lines of a file or stdin with regex
 
 Examples
 --------
 
-- Zip all the files in the current folder: zip archive *
+- grep apple grocery.list grocery.list2
 
-- Zip the current folder and subdirectories: zip -r archive *
+- grep -c counts number of matches
+
+- grep -h suppresses printing the filename
+
+- grep -i ignores case
+
+- grep -l only prints the filenames
+
+- grep -n includes line numbers
+
+- grep -v inverts matching
+
+- grep -w does word matching
 
 Resources
 ---------
 
-- [Zip/Unzip on Linux](http://robdvr.com/zip-unzip-linux/)
+- [Intro to Text Manipulation](http://www.ibm.com/developerworks/aix/library/au-unixtext/)
 
-[git]: https://robdvr.com
+[git]: https://www.ibm.com
 
-- [Manual Page](http://linux.die.net/man/1/zip)
+- [regex tutorial](http://regexone.com/lesson/capturing_groups)
 
-[git]: http://linux.die.net
+[git]: http://regexone.com
+
+- [Manual Page](http://man7.org/linux/man-pages/man1/grep.1.html)
+
+[git]: http://man7.org
