@@ -1,25 +1,28 @@
-TLDR - zip
+TLDR - comm
 ==========
 
 Overview
 --------
 
-zip is used to compressed files into a .zip archive.
+comm is used to find lines that differ and are in common between two files.
+Column 1 has lines only in file 1.
+Column 2 has lines only in file 2.
+Column 3 has lines in common.
 
 Examples
 --------
 
-- Zip all the files in the current folder: zip archive *
+- comm file1 file2
 
-- Zip the current folder and subdirectories: zip -r archive *
+- comm -12 file1 file2 (prints only the lines in common)
 
 Resources
 ---------
 
-- [Zip/Unzip on Linux](http://robdvr.com/zip-unzip-linux/)
+- [Intro to Text Manipulation](http://www.ibm.com/developerworks/aix/library/au-unixtext/)
 
-[git]: https://robdvr.com
+[git]: https://www.ibm.com
 
-- [Manual Page](http://linux.die.net/man/1/zip)
+- [Manual Page](http://man7.org/linux/man-pages/man1/comm.1.html)
 
-[git]: http://linux.die.net
+[git]: http://man7.org
