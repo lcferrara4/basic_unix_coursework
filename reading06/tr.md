@@ -1,25 +1,44 @@
-TLDR - zip
+TLDR - tr
 ==========
 
 Overview
 --------
 
-zip is used to compressed files into a .zip archive.
+tr deletes or translates stdin from one form to another using set classes
+
+These classes are:
+
+- alnum - alphanumeric characters
+- alpha - alphabetic characters
+- blank - whitespace characters
+- cntrl - control characters
+- digit - numeric characters
+- graph - graphic characters
+- lower - lower-case alphabetic characters
+- print - printable characters
+- punct - punctuation characters
+- space - space characters
+- upper - upper-case characters
+- xdigit - hexadecimal characters
 
 Examples
 --------
 
-- Zip all the files in the current folder: zip archive *
+- echo "Who is the standard text editor?" |tr [:lower:] [:upper:]
 
-- Zip the current folder and subdirectories: zip -r archive *
+WHO IS THE STANDARD TEXT EDITOR?
+
+- echo 'ed, of course!' |tr -d aeiou
+
+d, f crs!
 
 Resources
 ---------
 
-- [Zip/Unzip on Linux](http://robdvr.com/zip-unzip-linux/)
+- [Intro to Text Manipulation](http://www.ibm.com/developerworks/aix/library/au-unixtext/)
 
-[git]: https://robdvr.com
+[git]: https://www.ibm.com
 
-- [Manual Page](http://linux.die.net/man/1/zip)
+- [Manual Page](http://man7.org/linux/man-pages/man1/tr.1.html)
 
-[git]: http://linux.die.net
+[git]: http://man7.org
