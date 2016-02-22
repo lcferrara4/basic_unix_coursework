@@ -1,25 +1,45 @@
-TLDR - zip
+TLDR - sed
 ==========
 
 Overview
 --------
 
-zip is used to compressed files into a .zip archive.
+sed is used for text parsing and manipulation. It is great for substitution.
 
 Examples
 --------
 
-- Zip all the files in the current folder: zip archive *
+- For substitution, $ echo "IBM 174.99" |sed –e 's/IBM/International Business Machines/g'
 
-- Zip the current folder and subdirectories: zip -r archive *
+International Business Machines 174.99
+
+- Using sed with regex: sed 's/....$//' filelist.txt
+
+PuTTY
+
+sftp
+netstat
+servernames.
 
 Resources
 ---------
 
-- [Zip/Unzip on Linux](http://robdvr.com/zip-unzip-linux/)
+- [Intro to Text Manipulation](http://www.ibm.com/developerworks/aix/library/au-unixtext/)
 
-[git]: https://robdvr.com
+[git]: https://www.ibm.com
 
-- [Manual Page](http://linux.die.net/man/1/zip)
+- [Sed: Intro and Tutorial](http://www.grymoire.com/Unix/sed.html)
 
-[git]: http://linux.die.net
+[git]: http://www.grymoire.com
+
+- [Sed 20 examples](http://arkit.co.in/linux/sed-command-20-practical-examples/)
+
+[git]: http://arkit.co.in
+
+- [One-line sed scripts](http://sed.sourceforge.net/sed1line.txt)
+
+[git]: http://sed.sourceforge.net
+
+- [Manual Page](http://man7.org/linux/man-pages/man1/sed.1.html)
+
+[git]: http://man7.org
