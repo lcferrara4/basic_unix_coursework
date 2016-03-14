@@ -3,7 +3,7 @@
 
 DFLAGS=""
       
-HFLAGS=10
+HFLAGS="-10"
 
 while getopts "an:" opt; do
   case $opt in

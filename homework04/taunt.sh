@@ -1,3 +1,4 @@
+#!bin/sh
 PATH=$PATH:/afs/nd.edu/user15/pbui/pub/bin
 
 welcome()
