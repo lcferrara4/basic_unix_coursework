@@ -1,0 +1,82 @@
+\documentclass[letterpaper]{article}
+
+\title{Reading 08: Document Tools}
+\date{}
+\author{Lauren Ferrara}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\maketitle
+
+%------------------------------------------------------------------------------
+
+\section*{Overview}
+
+For this experiment, I created {\bf three} scripts:
+
+\begin{enumerate}
+
+\item{\tt roll\_dice.sh}: This script simulates rolling a dice.
+
+\item{\tt experiment.sh}: This script uses roll {\tt dice.sh} to perform an experiment and then collect that data into {\tt results.dat}.
+
+\item{\tt histogram.plt}: This script uses gnuplot to create a graph of the data in {\tt results.dat}.
+
+\end{enumerate}
+
+%------------------------------------------------------------------------------
+
+\section*{Rolling Dice}
+
+First, I created a script called roll {\tt dice.sh} that uses the shuf command to simulate rolling a die with a certain number of {\it sides} for a specified amount of {\it rolls}.
+
+\begin{verbatim}
+$ ./roll_dice.sh -h
+usage: roll_dice.sh [-r ROLLS -s sides]
+
+-r ROLLS Number of rolls of die (default: 10)
+-s SIDES Number of sides on die (default: 6)
+\end{verbatim}
+
+%------------------------------------------------------------------------------
+
+\section*{Experiment}
+
+Second, I created a script called {\tt experiment.sh} that uses {\tt roll\_dice.sh} to simulate rolling a {\bf six}-sided die 1000 times. My script uses {\tt awk} to collect the results into a single file called {\tt results.txt}.
+
+%------------------------------------------------------------------------------
+
+\section*{Results}
+
+Table 1 contains the results of my experiment of rolling a dice 1000 times:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{r||c}
+    Side	& Counts\\
+    \hline
+    1	& 161\\
+    2	& 167\\
+    3	& 156\\
+    4	& 177\\
+    5	& 163\\
+    6	& 176\\
+    \end{tabular}
+    \caption{Dice Rolling Results}
+    \label{tbl:dice}
+\end{table}
+
+Figure 1 contains a plot of my experimental results as produced by {\tt histogram.plt}:
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=5in]{results.png}
+  \caption{Dice Rolling Results}
+  \label{fig:results}
+\end{figure}
+
+\end{document}
