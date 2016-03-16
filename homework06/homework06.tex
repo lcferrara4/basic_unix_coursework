@@ -1,0 +1,118 @@
+\documentclass[letterpaper]{article}
+
+\title{Homework 06: Diversity in Computer Science}
+\date{March 16, 2016}
+\author{Lauren Ferrara\\
+\it{lferrara@nd.edu}}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\maketitle
+
+%------------------------------------------------------------------------------
+
+\section*{Overview}
+
+I created two shell scripts, one to process the gender data and one to process the ethnicity data. From these and the {\tt demographics.csv} data, I created data files and used them to produce histograms showing the department's gaps in diversity. These gaps showed that while the computer science department is growing, the proportion of females and non-caucasian ethnicities is not changing much. After seeing this, I would like to see how the University's data compares to understand whether this is a problem in CS in particular or throughout ND.
+
+%------------------------------------------------------------------------------
+
+\section*{Methodology}
+
+\begin{enumerate}
+
+\item{\tt gender.sh}: This script uses a for loop and cut to split the data from {\tt demographics.csv} at the delimiter ','. It then matches Ms and Fs using awk, counts them, and prints the totals with the years.
+
+\item{\tt ethnicity.sh}: This script uses a for loop and cut to split the data from {\tt demographics.csv} at the delimiter ',' and then takes the fields pertaining to ethnicity. With awk, it matches each of the different ethnicities, counts them, and prints the totals for each with the year.
+
+\item{\tt gender.plt}: This script uses gnuplot to create a graph of the data in {\tt gender.dat} produced by {\tt gender.sh}. It creates a side-by-side histogram of the number of women and the number of men in the department each year. This is done using two plot commands that both use boxes.
+
+\item{\tt ethnicity.plt}: This script uses gnuplot to create a graph of the data in {\tt ethnicity.dat} produced by {\tt ethnicity.sh}. It creates a rowstacked histogram for the breakdown of ethnicities in the department each year. This is done with the histogram rowstacked style and setting the xticlabels to the first column (the years).
+
+\end{enumerate}
+
+One problem I faced was representing the ethnicity data on the {\tt ethnicity.plt}. I originally tried to do a side-by-side histogram, as I did for gender. However, because the numbers were so small for some of the ethnicities, this plot did not show the data well. I had to spend a while trying to figure out how to use the rowstacked histogram to better represent the data.
+
+%----------------------------------------------------------------------------
+
+\newpage
+\section*{Analysis}
+
+\subsection*{Gender in CS Department}
+
+Table 1 contains the gender counts in the CS Department from 2013-2018: \par
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{r||c|c}
+    Year	& Female & Male\\
+    \hline
+    2013	& 14 & 49\\
+    2014	& 12 & 44\\
+    2015	& 16 & 58\\
+    2016	& 19 & 60\\
+    2017	& 26 & 65\\
+    2018	& 36 & 90\\
+    \end{tabular}
+    \caption{Gender Data}
+    \label{tbl:gender}
+\end{table}
+\bigskip
+Figure 1 contains a plot of the gender counts in the CS Department from 2013-2018 as produced by {\tt gender.plt}:
+\smallskip
+\begin{figure}[h!]
+	\centering
+	\caption{Gender in CS Department}
+	\includegraphics[width=5in]{gender.png}
+	\label{fig:results}
+\end{figure}
+
+\bigskip
+\newpage
+
+\subsection*{Ethnicity in CS Department}
+
+Table 2 contains the ethnicity data (the counts for each year) from the CS Department from 2013-2018: \newline
+\smallskip
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{r||c|c|c|c|c|c|c}
+    Year	& C & O & S & B & N & T & U\\
+    \hline
+    2013	& 43 & 7 & 7 & 3 & 1 & 2 & 0\\
+    2014	& 43 & 5 & 4 & 2 & 1 & 1 & 0\\
+    2015	& 47 & 9 & 10 & 4 & 1 & 1 & 2\\
+    2016	& 53 & 9 & 9 & 1 & 7 & 0 & 0\\
+    2017	& 60 & 12 & 3 & 5 & 5 & 6 & 0\\
+    2018	& 91 & 8 & 12 & 3 & 4 & 8 & 0\\
+    \end{tabular}
+    \caption{Ethnicity Data}
+    \label{tbl:ethnicity}
+\end{table}
+
+\bigskip
+
+Figure 2 contains a plot of the ethnicity breakdown in the CS Department from 2013-2018 as produced by {\tt ethnicity.plt}:
+\smallskip
+\begin{figure}[h!]
+	\centering
+	\caption{Ethnicity in CS Department}
+	\includegraphics[width=5in]{ethnicity.png}
+	\label{fig:results}
+\end{figure}
+\bigskip
+%------------------------------------------------------------------------------
+\newpage
+\section*{Discussion}
+
+\begin{itemize}
+\item The issues of gender and ethnic diversity are important to me, because I feel that in order to have a well-rounded education, I must be learning alongside peers from all different backgrounds. Notre Dame in particular strives to provide us with a wholistic education. This does not align with the lack of diversity in our school or in the computer science department. Our department and the tehnology industry at large should improve diversity. We are in a field where innovation is key to success. This innovation is stifled when we lack a broad perspective, which could be fixed by more diversification.
+\item I have found that the Computer Science and Engineering department is very welcoming and supportive. I love how open professors are to helping outside of class. I never feel like a burden when I attend office hours.
+\item The department may be able to improve by implementing some kind of mentor program, either between peers or with professors. We are so encouraged by our department to be learning new skills outside the classroom. However, when I get stuck on a CS issue that does not pertain to a specific course, I do not know who to ask for help. I think this feeling is more isolating for women and ethnic minorities in our department. If we were given a mentor to go to for those types of questions, it may help make the department a more supportive environment. 
+\end{itemize}
+
+\end{document}
