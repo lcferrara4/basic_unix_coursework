@@ -50,11 +50,14 @@ for path in args:
 		count = 1
 		LIST = line.split(DELIM)
 		for index in sorted(FIELDS):
-			sys.stdout.write(LIST[int(index) - 1])
-			if count < len(FIELDS):
-				sys.stdout.write(DELIM)
+			if len(LIST) >= int(index):
+				sys.stdout.write(LIST[int(index) - 1])
+				if len(LIST) > int(index):
+					if count < len(FIELDS):
+						sys.stdout.write(DELIM)
+					else:
+						print
 			else:
-				print	
+				print
 			count = count + 1
-
 	stream.close()

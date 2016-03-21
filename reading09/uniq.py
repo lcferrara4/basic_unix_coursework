@@ -50,8 +50,8 @@ for path in args:
 
         stream.close()
 
-for key in uniq:
+for key in sorted(uniq):
 	if numbers:
-		print uniq[key], key,
+		print repr(uniq[key]).rjust(7), key,
 	else:
 		print key,

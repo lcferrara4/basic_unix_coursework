@@ -37,8 +37,12 @@ for o, a in opts:
 
 if len(args) == 0:
     	args.append('-')
+	explicit = False
+else:
+	explicit = True
 
 chars = words = lines = 0
+
 
 for path in args:
 	if path == '-':
@@ -51,13 +55,18 @@ for path in args:
 		words += len(line.split())
 		chars += len(line)
 
+	if CHARACTERS == True:
+        	print chars,
+	elif WORDS == True:
+        	print words,
+	elif LINES == True:
+        	print lines,
+	else:
+		usage(3)
+
+	if explicit:
+		print path
+
 	stream.close()
 
-if CHARACTERS == True:
-	print chars
-elif WORDS == True:
-	print words
-elif LINES == True:
-	print lines
-else:
-	usage(3)
+
