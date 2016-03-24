@@ -102,13 +102,13 @@ def include(path):
 		if not fnmatch.fnmatch(os.path.basename(path), NAME):
 			return False
 
-        if PATH != "":
-                if not fnmatch.fnmatch(path, PATH):
-                        return False
+  if PATH != "":
+    if not fnmatch.fnmatch(path, PATH):
+      return False
 
 	if REGEX != "":
-                if not re.search(REGEX, path):
-                        return False
+    if not re.search(REGEX, path):
+      return False
 
 
 	if MODE != 0:
@@ -153,20 +153,20 @@ while count < len(args):
 		count = count + 1
 	elif args[count] == 'executable':
 		executable = True
-        elif args[count] == 'readable':
-                readable = True
-        elif args[count] == 'writable':
-                writable = True
-        elif args[count] == 'empty':
-                empty = True
+  elif args[count] == 'readable':
+    readable = True
+  elif args[count] == 'writable':
+    writable = True
+  elif args[count] == 'empty':
+    empty = True
 	elif args[count] == 'name':
 		NAME = args[int(count) + 1]
 		count = count + 1
-        elif args[count] == 'path':
-                PATH = args[int(count) + 1]
+  elif args[count] == 'path':
+    PATH = args[int(count) + 1]
 		count = count + 1
-        elif args[count] == 'regex':
-                REGEX = args[int(count) + 1]
+  elif args[count] == 'regex':
+    REGEX = args[int(count) + 1]
 		count = count + 1
 	elif args[count] == 'perm':
 		MODE = int(args[int(count) + 1])

@@ -76,7 +76,7 @@ for command in sys.argv[1:]:
 
 # input
 if IF != 0:
-	fd = open_fd(IF, os.O_RDONLY)
+	      fd = open_fd(IF, os.O_RDONLY)
         os.lseek(fd, SKIP * BS, 0)
 else:
 	fd = 0
