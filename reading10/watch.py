@@ -36,7 +36,10 @@ count = 1
 
 for o, a in opts:
         if o == '-n':
-                INT = int(a)
+                try:
+			INT = int(a)
+		except:
+			usage(2)
 		count = 3
 
 COMMAND = ' '.join(sys.argv[count:])

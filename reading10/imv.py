@@ -5,11 +5,6 @@ import sys
 import tempfile
 import getopt
 
-# Global Variables
-
-EDITOR = 'vim'
-
-
 # Functions
 
 def error(message, exit_code=1):
@@ -46,7 +41,7 @@ temp.close()
 # Open in EDITOR
 
 try:
-	os.system('%s %s' % (EDITOR, temp.name))
+	os.system('${EDITOR:-vim} %s' % temp.name)
 except:
 	error('Could not open EDITOR')
 
