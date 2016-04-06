@@ -58,7 +58,6 @@ def check_file(f, mode):
 				fill_moddict(f)
 			else:
 				execute_action(f)
-# don't think re works properly
 
 def fill_moddict(f):
 	try:
